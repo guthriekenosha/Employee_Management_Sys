@@ -46,11 +46,14 @@ private EmployeeRepository employeeRepo;
 	}
 	
 	//Update employee
-	public Employee updateEmployee(Long id, String firstName, String lastName, String emailId) {
+	public Employee updateEmployee(Long id, String firstName, String lastName, String emailId, String role, String startDate, String empStatus) {
 		Employee employee = getOneEmployee(id);
 		employee.setFirstName(firstName);
 		employee.setLastName(lastName);
 		employee.setEmailId(emailId);
+		employee.setRole(role);
+		employee.setStartDate(startDate);
+		employee.setEmpStatus(empStatus);
 		return employeeRepo.save(employee);
 	}
 	
