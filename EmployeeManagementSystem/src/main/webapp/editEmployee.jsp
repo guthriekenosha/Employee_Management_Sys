@@ -22,40 +22,35 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Shop Pre-Owned</a>
+                    <a class="nav-link" href="#">Register New Account</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Shop New Cars</a>
+                    <a class="nav-link" href="#">Another Page</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Clearence Event</a>
+                    <a class="nav-link" href="#">Another Page</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Resources
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Carfax</a>
-                        <a class="dropdown-item" href="#">Carproof</a>
+                        <a class="dropdown-item" href="#">Another Page</a>
+                        <a class="dropdown-item" href="#">Another Page</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Omnivic</a>
+                        <a class="dropdown-item" href="#">Another Page</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">Enter IT Ticket</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Log Out</a>                  
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Sign In</a>                  
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-danger text-white" type="button" href="#" data-toggle="modal" data-target="#myModal">Register</a>
-                </li>
+
             </ul>
         </div>
 
@@ -101,10 +96,8 @@
             </div>
         </div>
     </div>
-            
-
+ 
     </nav>
-</div>
 
 
 <form:form action="/ems/updateEmployee/${editEmployee.id}" method="post"
