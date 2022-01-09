@@ -76,7 +76,7 @@ public class EmployeeController {
 	public String editEmployee(@PathVariable("employeeId") Long id, @ModelAttribute("editEemployee")Employee employee, Model model, HttpSession session) {
 		Employee editEmployee= employeeService.getOneEmployee(id);
 		model.addAttribute("editEmployee", editEmployee);
-		return "EMS/editEmployee.jsp";
+		return "/editEmployee.jsp";
 	}
 	
 	
@@ -84,16 +84,16 @@ public class EmployeeController {
 	
 	
 	//Update Employee
-	@GetMapping("/ems/updateEmployee/{employeeId}")
+	@PostMapping("/ems/updateEmployee/{employeeId}")
 	public String updateEmployee(@PathVariable("employeeId")Long id, @Valid @ModelAttribute("editEmployee") Employee employee, Model model, BindingResult result, HttpSession session) {
 		if (result.hasErrors()) {
 			Employee editEmployee = employeeService.getOneEmployee(id);
 			model.addAttribute("editEmployee", editEmployee);
-			return "EMS/editEmployee.jsp";
+			return "/editEmployee.jsp";
 		}else {
 			
 			Employee newEmployee = employeeService.updateEmployee(id, employee.getFirstName(), employee.getLastName(), employee.getEmailId(), employee.getRole(), employee.getStartDate(), employee.getEmpStatus());
-			return "redirect:/employeeDashboard";
+			return "redirect:/";
 		}
 	}
 	
@@ -104,7 +104,7 @@ public class EmployeeController {
 	@GetMapping("/ems/deleteEmployee/{employeeId}")
 	public String deleteEmployee(@PathVariable("employeeId")Long id){
 		employeeService.deleteEmployee(id);
-		return "redirect:/employeedashboard";
+		return "redirect:/";
 	}
 		
 }
