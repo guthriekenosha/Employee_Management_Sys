@@ -53,59 +53,15 @@
 
             </ul>
         </div>
-
-            <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Customer Sign In</h4>
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <form>
-                        <label class="sr-only" for="usrname">Username</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                        </div>
-
-
-                        <label class="sr-only" for="Password">Name</label>
-                        <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
-                            </div>
-                            <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" >Sign In</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
- 
+           
     </nav>
-
 
 <form:form action="/ems/updateEmployee/${editEmployee.id}" method="post"
 			modelAttribute="editEmployee">
 
 		<div class="form-group"> <!-- First Name -->
 			<label for="firstName" class="control-label">First Name</label>
-			<input type="text" class="form-control" id="${editEmployee.firstName }" name="firstName" placeholder="First Name">
+			<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
 		</div>	
 
 		<div class="form-group"> <!-- Last Name -->
@@ -125,7 +81,7 @@
 							
 		<div class="form-group"> <!-- Employee Status -->
 		<label for="empStatus" class="control-label">Employee Status</label>
-		<select class="form-control" id="empStatus">
+		<select class="form-control" id="empStatus" name="empStatus">
 			<option value="A">Active</option>
 			<option value="I">Inactive</option>
 			<option value="T">Terminated</option>

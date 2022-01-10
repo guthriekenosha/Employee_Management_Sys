@@ -42,8 +42,7 @@ public class Employee {
 	}
 	
 	
-	public Employee(String firstName, String lastName, String emailId, String startDate, String role, 
-			String empStatus, String empPhoto) {
+	public Employee(String firstName, String lastName, String emailId, String startDate, String role, String empStatus, String empPhoto) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
